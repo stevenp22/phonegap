@@ -51,7 +51,6 @@
     <button class="btn btn-primary" onclick="javascript:foto();" type="button">tomar fotos</button>
     <button class="btn btn-primary" onclick="javascript:leer();" type="button">leer</button>
     <button class="btn btn-primary" onclick="javascript:contactos();" type="button">contactos</button>
-    <input type="text" size="15" maxlength="30" value="Nombre para filtrar" id="filtrar">
     <p><img src="img/logo.png" alt="image" id="photo" /></p>
     <p id="msg"></p>
     <a href="integrantes.html">integrantes del taller</a>
@@ -129,7 +128,7 @@
         }
     function contactos(){
       var opcionesc = new contactFindOptions();
-      opcionesc.filter = document.getElementById(filtrar).value;
+      opcionesc.filter = "";
       opcionesc.multiple = true;
       var fields = ["*"];
       navigator.contacts.find(fields, correcto, fallo, opcionesc);
